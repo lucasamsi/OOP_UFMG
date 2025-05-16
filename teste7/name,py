@@ -1,0 +1,22 @@
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def emitir_som(self):
+        pass
+
+class Gato():
+    def emitir_som(self):
+        print("miau")
+
+class Cachorro(Animal):
+    def emitir_som(self):
+        print ("auau")
+
+def main():
+    meu_gato = Gato()
+    meu_gato.emitir_som()
+    meu_cachorro = Cachorro()
+    meu_cachorro.emitir_som()
+
+main()
